@@ -1,4 +1,4 @@
 package com.bnppf.tictactoe.domain;
 
-public class BoardTest {
+public class Board {
 }
