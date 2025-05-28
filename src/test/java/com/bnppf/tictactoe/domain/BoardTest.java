@@ -94,4 +94,23 @@ class BoardTest {
         assertFalse(board.makeMove(2,0), "Should not be able to move after game is won.");
         assertNull(board.getCell(2,0)); // Cell should remain empty
     }
+    @Test
+    void makeMove_shouldResultInDraw() {
+        // X O X
+        // X X O
+        // O X O
+        board.makeMove(0, 0); // X
+        board.makeMove(0, 1); // O
+        board.makeMove(0, 2); // X
+
+        board.makeMove(1, 2); // O
+        board.makeMove(1, 0); // X
+        board.makeMove(2, 0); // O
+
+        board.makeMove(1, 1); // X
+        board.makeMove(2, 2); // O
+        assertTrue(board.makeMove(2, 1), "X makes the final move for a draw."); // X
+
+        assertEquals(GameStatus.DRAW, board.getGameStatus());
+    }
 }
