@@ -12,7 +12,7 @@ A simple Tic Tac Toe game implemented with Java and Spring Boot, following a TDD
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/aageon-bl/TicTacToe.git](https://github.com/aageon-bl/TicTacToe.git)
+    git clone https://github.com/aageon-bl/TicTacToe.git
     cd ./TicTacToe
     ```
 
