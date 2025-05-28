@@ -79,16 +79,6 @@ class BoardTest {
         assertEquals(GameStatus.X_WINS, board.getGameStatus());
     }
 
-    @Test
-    void makeMove_playerOWinsDiagonallyFromTopRight() {
-        board.makeMove(0, 2); // X
-        board.makeMove(0, 0); // O
-        board.makeMove(1, 2); // X
-        board.makeMove(1, 1); // O
-        board.makeMove(2, 1); // X
-        assertTrue(board.makeMove(2, 0), "O makes winning move."); // O
-        assertEquals(GameStatus.O_WINS, board.getGameStatus());
-    }
 
     @Test
     void makeMove_cannotMoveAfterGameWon() {
